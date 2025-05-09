@@ -17,7 +17,7 @@ export default function Values() {
                             </div>
                         </div>
                         <div className="col-6 description">
-                            <p>Prends le temps d'écouter les autres</p>
+                            <p>Prends le temps d&apos;écouter les autres</p>
                             <p>Participation à du bénévolat</p>
                         </div>
                     </div>
@@ -29,7 +29,7 @@ export default function Values() {
                         <div className="col-6 valeur">
                             <div className="fond">
                                 <i className="fa-solid fa-people-group"></i>
-                                <h2>TRAVAIL D’EQUIPE</h2>
+                                <h2>TRAVAIL D&apos;EQUIPE</h2>
                             </div>
                         </div>
                     </div>
