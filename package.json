@@ -2,17 +2,22 @@
   "name": "fvt_portfolio_final",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://fabien-vitrat.github.io/react-portfolio",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@react-component-library/utils": "^0.0.2",
     "aos": "^2.3.4",
+    "lucide-react": "^0.513.0",
     "next": "15.3.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "utils": "^0.3.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

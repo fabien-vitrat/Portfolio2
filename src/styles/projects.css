@@ -1,0 +1,95 @@
+.projects {
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;}
+
+    .projects .portfolio {
+        margin-top: 30px; }
+
+        .projects .portfolio .project {
+            align-items: center;
+            margin-bottom: 2rem; }
+            .projects .portfolio .project .img-fluid {
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+                border-radius: 10px;
+                height: 300px;
+                margin: 0 auto;
+                display: block;
+                position: relative; }
+
+
+.portfolio-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  top: 0;
+  z-index: 1;
+  mix-blend-mode: normal;
+}
+
+.portfolio-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  gap: 40px;
+}
+
+.portfolio-text-block {
+  max-width: 40%;
+}
+
+.portfolio-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.portfolio-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.portfolio-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.portfolio-image {
+  width: 55%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.portfolio .right{ 
+    display: flex;
+    flex-direction: column;
+}
+
+    .portfolio .right img {
+        width: 110%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 10px; }
+
+    .portfolio .right h2 {
+        margin-top: 20px;
+        font-size: 24px;
+        text-align: left; }
+
+    .portfolio .right p {
+        margin-top: 10px;
+        font-size: 16px;
+        text-align: center;
+}
+
+
+

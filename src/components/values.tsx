@@ -58,11 +58,11 @@ export default function Values() {
                         </div>
                     </div>
                 </div>
+
                 {/*<div className="citation">
                     <p>"Les valeurs sont le sens que l'on choisit de donner à la vie."</p>
                     <p className="auteur">Jean-Paule Satres</p>
-                </div>*/
-                }
+                </div>*/}
             </div>
         </section>
 

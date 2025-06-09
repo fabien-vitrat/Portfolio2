@@ -59,19 +59,7 @@
         padding: 0;
     }
 
-.citation {
-    border-radius: 5px;
-    width: 36rem;
-    padding: 10px;
-    box-shadow: 0 0 20em -30px;
-    margin: 0 auto;
-}
-.citation p {
-    margin: 0;
-}
-.citation .auteur {
-    font-style: italic;
-    text-align: end;}
+
 
 @media (max-width: 767px) {
     .valeurs .gauche,
@@ -86,7 +74,8 @@
     .valeurs .gauche {
         display: flex;
         flex-direction: column;
-        align-items: center;}
+        align-items: center;
+        padding: 30px;}
         .valeurs .gauche .valeur {
             display: flex;
             justify-content: center;
@@ -105,9 +94,7 @@
         .valeurs .droite .description {
             display: flex;
             align-items: center;}
-    .citation {
-        width: 20rem;
-        text-align: center;}
+
 }
 
 

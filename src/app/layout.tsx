@@ -8,6 +8,10 @@ import "@/styles/about.css";
 import "@/styles/values.css";
 import "@/styles/goals.css";
 import "@/styles/course.css";
+import "@/styles/competences.css";
+import "@/styles/projects.css";
+import "@/styles/contact.css";
+import "@/styles/header.css";
 
 
 export default function RootLayout({
