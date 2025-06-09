@@ -2,7 +2,7 @@
   "name": "fvt_portfolio_final",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://fabien-vitrat.github.io/react-portfolio",
+  "homepage": "https://github.com/fabien-vitrat/react-portfolio.git",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
