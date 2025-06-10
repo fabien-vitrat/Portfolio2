@@ -2,61 +2,95 @@
 
 import Image from 'next/image';
 import Portrait from '@/public/portrait.jpeg';
+import { useEffect, useState } from 'react';
 
 export default function About() {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        const element = document.querySelector('.about');
+        if (element) {
+            observer.observe(element);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
+    const personalInfo = [
+        { label: 'Date de naissance', value: '1 mai 2007' },
+        { label: 'Email', value: 'vitratfabien@gmail.com' },
+        { label: 'Téléphone', value: '+33 7 66 18 07 15' },
+        { label: 'Ville', value: 'Marseille, France' },
+        { label: 'Age', value: '17 ans' },
+        { label: 'Établissement', value: 'Lycée de Provence' },
+        { label: 'Niveau', value: 'Terminale' },
+        { label: 'Langues', value: 'Français, Espagnol, Anglais' }
+    ];
+
+    const passions = ['SPORT', 'AUTOMOBILE', 'PHOTOGRAPHIE', 'VOYAGE', 'INFORMATIQUE'];
+
     return (
-        <section className='about'>
+        <section className={`about ${isVisible ? 'visible' : ''}`}>
             <div className="container">
-                <div className="row">
-                    
-                    <div className="col-md-8 col-sm-12 content">
-                        <div className="section-title">
-                            <h1>Fabien VITRAT</h1>
-                            <h2>A PROPOS DE MOI</h2>
+                <div className="section-title">
+                    <h1>Fabien VITRAT</h1>
+                    <h2>À PROPOS DE MOI</h2>
+                </div>
+                
+                <div className="about-content">
+                    <div className="about-text">
+                        <div className="about-intro">
+                            <h3>Qui suis-je ?</h3>
+                            <p>
+                                Toujours à la recherche de nouvelles opportunités pour apprendre et évoluer, 
+                                je m'investis avec passion dans des projets variés. Curieux et déterminé, 
+                                je m'efforce de mêler rigueur, créativité et esprit d'équipe pour relever 
+                                chaque défi avec enthousiasme.
+                            </p>
                         </div>
-                        <div className="row info">
-                            <div className="col-lg-6">
-                                <ul>
-                                    <li><strong>Date de naissance :</strong> <span>1 mai 2007</span></li>
-                                    <li><strong>Email :</strong> <span>vitratfabien@gmail.com</span></li>
-                                    <li><strong>Téléphone :</strong> <span>+33 7 66 18 07 15</span></li>
-                                    <li><strong>Ville :</strong> <span>Marseille, France</span></li>
-                                </ul>
-                            </div>
-                            {/* Image visible seulement en mobile */}
-                            <div className="portrait-mobile">
-                                <Image 
-                                    src={Portrait} 
-                                    alt='Portrait'
-                                    className='img-fluid'
-                                />
-                            </div>
-                            <div className="col-lg-6">
-                                <ul>
-                                    <li><strong>Age :</strong> <span>17 ans</span></li>
-                                    <li><strong>Etablissement :</strong> <span>Lycée de Provence</span></li>
-                                    <li><strong>Niveau :</strong> <span>Terminale</span></li>
-                                    <li><strong>Langues :</strong> <span>Français, Espagnol, Anglais</span></li>
-                                </ul>
+
+                        <div className="personal-info">
+                            <div className="info-grid">
+                                {personalInfo.map((info, index) => (
+                                    <div key={index} className="info-item">
+                                        <span className="info-label">{info.label}</span>
+                                        <span className="info-value">{info.value}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                        <div>
-                            <p>Toujours à la recherche de nouvelles opportunités pour apprendre et évoluer, je m&apos;investis avec passion dans des projets variés. Curieux et déterminé, je m&apos;efforce de mêler rigueur, créativité et esprit d&apos;équipe pour relever chaque défi avec enthousiasme. À travers ce portfolio, je vous invite à plonger dans mon univers, façonné par mes passions, mes aspirations et mon ambition.</p>
-                        </div>
-                        <div className='passions'>
-                            <p>SPORT</p>
-                            <p>AUTOMOBILE</p>
-                            <p>PHOTOGRAPHIE</p>
-                            <p>VOYAGE</p>
-                            <p>INFORMATIQUE</p>
+
+                        <div className="passions-section">
+                            <h4>Mes passions</h4>
+                            <div className="passions-tags">
+                                {passions.map((passion, index) => (
+                                    <span key={index} className="passion-tag">
+                                        {passion}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                    <div className="col-md-4 col-sm-12 img">
-                        <Image
-                            src={Portrait}
-                            alt='Portrait'
-                            className='img-fluid'
-                        />
+
+                    <div className="about-image">
+                        <div className="image-container">
+                            <Image
+                                src={Portrait}
+                                alt="Portrait de Fabien VITRAT"
+                                className="portrait-img"
+                                priority
+                            />
+                            <div className="image-overlay"></div>
+                        </div>
                     </div>
                 </div>
             </div>
