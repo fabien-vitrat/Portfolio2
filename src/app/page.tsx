@@ -1,13 +1,6 @@
-/* Import des composants de la page d'accueil */
-import Header from "@/components/header";
-import Welcome from "@/components/welcome";
-import About from "@/components/about";
-import Values from "@/components/values";
-import Goals from "@/components/goals";
-import Course from "@/components/course";
-import Competences from "@/components/competences";
-import Projects from "@/components/projects";
-import Contact from "@/components/contact";
+import Header from "@/components/Header";
+import Welcome from "@/components/Welcome";
+import About from "@/components/About";
 
 export default function Home() {
   return (
@@ -16,12 +9,6 @@ export default function Home() {
       <main>
         <Welcome />
         <About />
-        <Values />
-        <Goals />
-        <Course />
-        <Competences />
-        <Projects />
-        <Contact />
       </main>
     </>
   );

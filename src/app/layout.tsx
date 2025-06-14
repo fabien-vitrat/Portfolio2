@@ -1,19 +1,5 @@
 import "./globals.css";
 
-/* Import des styles */
-import "@/styles/bootstrap.min.css";
-import "@/styles/style.css";
-import "@/styles/welcome.css";
-import "@/styles/about.css";
-import "@/styles/values.css";
-import "@/styles/goals.css";
-import "@/styles/course.css";
-import "@/styles/competences.css";
-import "@/styles/projects.css";
-import "@/styles/contact.css";
-import "@/styles/header.css";
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,10 +7,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-
       <head>
         <meta charSet="utf-8" />
-        <title>Fabien VITRAT</title>
+        <title>Fabien VITRAT - Portfolio</title>
+        <meta name="description" content="Portfolio de Fabien VITRAT - Étudiant passionné et développeur" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -33,7 +20,6 @@ export default function RootLayout({
           referrerPolicy="no-referrer"
         />
       </head>
-
       <body className="light_theme">
         {children}
       </body>
